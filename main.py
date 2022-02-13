@@ -14,6 +14,7 @@ from colorama import Fore, init
 # главное чтобы на моих телефонах можно было играть в клэш раял -Стив Жопс
 
 #Настройка
+webhook_guilds_url = "" #вэбхук, куда будут идти логи
 prefix = ""#префикс
 token = "" #токен
 jk_ids = [] #айдишники разрабов
@@ -442,3 +443,4 @@ async def customspam(ctx, *, arg):
     await ctx.send(arg)
 
 bot.run(token)
+#мне похуй, что это говнокод
