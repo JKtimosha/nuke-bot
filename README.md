@@ -27,7 +27,7 @@ wl = [] #вайт-лист, вроде бы вырезал
 Далее сохраните изменения.
 
 Во вкладке bot в discord developers нужно пролистать вниз, включить presence intent и server members intent
-![пупупуп](https://prnt.sc/26v5dvq) 
+![пупупуп](https://ibb.co/V2Bxpks) 
 
 # Запуск
 ```
